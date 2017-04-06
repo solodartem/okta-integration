@@ -12,6 +12,7 @@
     <!-- Scan for auto-wiring classes in spring saml packages -->
     <context:component-scan base-package="org.springframework.security.saml"/>
 
+    <security:http security="none" pattern="/opened/input"/>
 
     <!-- Unsecured pages -->
     <!--
@@ -148,8 +149,10 @@
                 <bean class="org.opensaml.saml2.metadata.provider.HTTPMetadataProvider">
                     <!-- URL containing the metadata -->
                     <constructor-arg>
-                        <!-- This URL should look something like this: https://example.okta.com/app/abc0defghijK1lmN23o4/sso/saml/metadata -->
+<!--
                         <value type="java.lang.String">https://dev-245923.oktapreview.com/app/exka2hk2bnRmnEAbg0h7/sso/saml/metadata</value>
+-->
+                        <value type="java.lang.String">https://dev-245923.oktapreview.com/app/exka3a4igdwiBfp3V0h7/sso/saml/metadata</value>
                     </constructor-arg>
                     <!-- Timeout for metadata loading in ms -->
                     <constructor-arg>
