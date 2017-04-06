@@ -7,13 +7,13 @@
 	<display-name>Spring3 MVC Application</display-name>
 
 	<servlet>
-		<servlet-name>spring-web</servlet-name>
+		<servlet-name>opened</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>spring-web</servlet-name>
+		<servlet-name>opened</servlet-name>
 		<url-pattern>/opened/*</url-pattern>
 	</servlet-mapping>
 
