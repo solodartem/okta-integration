@@ -39,12 +39,11 @@
                 <table class="table">
                     <%--Stores Attributes Parsed Form Saml Assertion --%>
 
-                    <%  
-                        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-                        SAMLCredential credential = (SAMLCredential) authentication.getCredentials();
-                        List<Attribute>  attributes = credential.getAttributes(); 
+                    <%
+                        SAMLCredential samlCredential = (SAMLCredential) SecurityContextHolder.getContext().getAuthentication().getCredentials();
+                        List<Attribute>  attributes = samlCredential.getAttributes();
 
-                        pageContext.setAttribute("credential", credential);
+                        pageContext.setAttribute("credential", samlCredential);
                         pageContext.setAttribute("attributes",attributes);
                     %>
                     <%-- Displays Attribute Name and Corresponding Attribute iteratively --%>
